@@ -8,6 +8,7 @@ function findRoots () {
   const b = Number(bValue.value);
   const c = Number(cValue.value);
   const d = Number(dValue.value);
+
   const p = (3*a*c-Math.pow(b, 2))/(3*Math.pow(a, 2));
   const q = ((27*Math.pow(a, 2)*d - 9*a*b*c + 2*Math.pow(b, 3)))/(27*Math.pow(a, 3))
 
@@ -23,8 +24,14 @@ function findRoots () {
     const x3 = (2*(Math.sqrt(-p/3))*Math.cos(angle +(4*Math.PI)/3))-(b/(3*a))
   } 
   
+  if (discriminant > 0) {
+    const u = Math.cbrt((-q / 2) + Math.sqrt(discriminant)); 
+    const v = Math.cbrt((-q / 2) - Math.sqrt(discriminant));
+    const x1 = u + v - (b/(3*a))
+  }
+
   else {
-  console.log("Use Cardano's Method");
+  console.log("Use Cardano's Method C");
   } 
 
 }
