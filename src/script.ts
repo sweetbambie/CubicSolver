@@ -31,7 +31,7 @@ function findRoots () {
   }
 
   else {
-  console.log("Use Cardano's Method C");
+    const x1 = Math.cbrt(q/2)-(b/(3*a))
   } 
 
 }
