@@ -1,24 +1,13 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+const aValue = document.getElementById("a") as HTMLInputElement;
+const bValue = document.getElementById("b") as HTMLInputElement;
+const cValue = document.getElementById("c") as HTMLInputElement;
+const dValue = document.getElementById("d") as HTMLInputElement;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+function findRoots () {
+  const a = Number(aValue.value);
+  const b = Number(bValue.value);
+  const c = Number(cValue.value);
+  const d = Number(dValue.value);
+  const p = (3*a*c-b)/(3*a**2)
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+}
