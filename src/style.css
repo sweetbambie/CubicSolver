@@ -17,18 +17,18 @@ body{
   background: rgb(255, 189, 226);
   border-radius: 8px;
 }
-#cubic-form {
+form {
   display: flex;
   flex-direction: column;
   gap: 10px; 
 }
 
-#cubic-form input{
+input{
     border:0;
     outline: 0;
 }
 
-#cubic-form input[type="submit"] {
+button {
     background-color: rgb(245, 140, 199);
     border:0;
     outline:0;

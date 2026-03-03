@@ -28,8 +28,8 @@ function findRoots () {
     const u = Math.cbrt((-q / 2) + Math.sqrt(discriminant)); 
     const v = Math.cbrt((-q / 2) - Math.sqrt(discriminant));
     const x1 = u + v - (b/(3*a))
-    const x2 = u + v - (b/(3*a))
-    const x3 = u + v - (b/(3*a))
+    const x2 = "Complex";
+    const x3 = "Complex"
   }
 
   else {
@@ -38,5 +38,9 @@ function findRoots () {
     const x1 = r1 - shift;      
     const x2 = -2 * r1 - shift;  
     const x3 = -2 * r1 - shift;
-  } 
+  }
+  
+  const out1 = document.getElementById("x1-result") as HTMLInputElement;
+  const out2 = document.getElementById("x2-result") as HTMLInputElement;
+  const out3 = document.getElementById("x3-result") as HTMLInputElement;
 }
