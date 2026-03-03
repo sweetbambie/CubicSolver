@@ -24,14 +24,19 @@ function findRoots () {
     const x3 = (2*(Math.sqrt(-p/3))*Math.cos(angle +(4*Math.PI)/3))-(b/(3*a))
   } 
   
-  if (discriminant > 0) {
+  else if (discriminant > 0) {
     const u = Math.cbrt((-q / 2) + Math.sqrt(discriminant)); 
     const v = Math.cbrt((-q / 2) - Math.sqrt(discriminant));
     const x1 = u + v - (b/(3*a))
+    const x2 = u + v - (b/(3*a))
+    const x3 = u + v - (b/(3*a))
   }
 
   else {
-    const x1 = Math.cbrt(q/2)-(b/(3*a))
+    const r1 = Math.cbrt(q / 2); 
+    const shift = b / (3 * a);   
+    const x1 = r1 - shift;      
+    const x2 = -2 * r1 - shift;  
+    const x3 = -2 * r1 - shift;
   } 
-
 }
