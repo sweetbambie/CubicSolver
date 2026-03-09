@@ -28,7 +28,7 @@ input{
     outline: 0;
 }
 
-button {
+#button {
     background-color: rgb(245, 140, 199);
     border:0;
     outline:0;
