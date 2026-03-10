@@ -1,12 +1,17 @@
 const canvas = document.getElementById("graph") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d")!;
 
+
 document?.addEventListener("submit", (event) => {
   event.preventDefault();
   const aValue = document.getElementById("a") as HTMLInputElement;
   const bValue = document.getElementById("b") as HTMLInputElement;
   const cValue = document.getElementById("c") as HTMLInputElement;
   const dValue = document.getElementById("d") as HTMLInputElement;
+
+  const equationDisplay = document.getElementById("equation-display") as HTMLParagraphElement;
+  const equationText = `y = ${aValue.value}x³ + ${bValue.value}x² + ${cValue.value}x + ${dValue.value}`;
+  equationDisplay.innerText = equationText;
 
   const a = Number(aValue.value);
   const b = Number(bValue.value);
