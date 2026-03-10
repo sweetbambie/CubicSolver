@@ -40,10 +40,6 @@ body {
   border-radius: 8px;
 }
 
-#graph {
-  display: block;
-}
-
 form {
   display: flex;
   flex-direction: column;
