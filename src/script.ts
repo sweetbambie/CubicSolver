@@ -1,5 +1,8 @@
+const canvas = document.getElementById("graph") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d")!;
+
 document?.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
   const aValue = document.getElementById("a") as HTMLInputElement;
   const bValue = document.getElementById("b") as HTMLInputElement;
   const cValue = document.getElementById("c") as HTMLInputElement;
@@ -51,4 +54,40 @@ document?.addEventListener("submit", (event) => {
   (document.getElementById("p-result") as HTMLInputElement).value = `${p}`;
   (document.getElementById("q-result") as HTMLInputElement).value = `${q}`;
   (document.getElementById("discriminate") as HTMLInputElement).value = `${discriminant}`;
+
+  ctx.clearRect(0, 0, 600, 600);
+  ctx.strokeStyle = "gray";
+  ctx.lineWidth = 1;
+
+  for (let i = 0; i <= 600; i += 20) {
+          ctx.beginPath();
+          ctx.moveTo(i, 0);
+          ctx.lineTo(i, 600);
+          ctx.moveTo(0, i);
+          ctx.lineTo(600, i);
+          ctx.stroke();
+      }
+
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 2;
+
+      ctx.beginPath();
+      ctx.moveTo(0, 300);
+      ctx.lineTo(600, 300);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(300, 0);
+      ctx.lineTo(300, 600);
+      ctx.stroke();
+
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let x = -300; x <= 300; x++) {
+          const X = x / 20;
+          const y = a * X * X * X + b * X * X + c * X + d;
+          ctx.lineTo(300 + x, 300 - y * 20);
+          ctx.stroke();
+      }
 })

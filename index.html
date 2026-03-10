@@ -22,10 +22,10 @@
         <input type="number" id="c" name="c" required />
         <label for="d">d value:</label>
         <input type="number" id="d" name="d" required />
-        <input type="submit" value="Calculate" />
+        <input type="submit" id="button" value="Calculate" />
         </form>
-    </div>
-
+    </div>  
+  
     <div class="container">
       <h1>Results</h1>
       <form id="result-form">
@@ -49,4 +49,8 @@
     </form>
     </div>
   </div>
+  <div>
+    <canvas id="graph" width="600" height="600"></canvas>
+  </div>
+  <script type="module" src="/src/script.ts"></script>
 </body>
