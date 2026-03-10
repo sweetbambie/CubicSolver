@@ -55,7 +55,7 @@ document?.addEventListener("submit", (event) => {
   (document.getElementById("q-result") as HTMLInputElement).value = `${q}`;
   (document.getElementById("discriminate") as HTMLInputElement).value = `${discriminant}`;
 
-  ctx.clearRect(0, 0, 300, 300);
+  ctx.clearRect(0, 0, 600, 600);
   ctx.strokeStyle = "gray";
   ctx.lineWidth = 1;
 
