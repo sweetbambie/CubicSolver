@@ -13,10 +13,10 @@
   <div class="main-layout">
     <div class="forms-column">
       <div class="container">
-      <h1>Equation</h1>
-      <p id="equation-display">
-        y = ax³ + bx² + cx + d
-      </p>
+        <h1>Equation</h1>
+        <p id="equation-display">
+          y = ax³ + bx² + cx + d
+        </p>
       </div>
       <div class="container">
         <h1>Cubic Solver</h1>
@@ -35,20 +35,14 @@
 
       <div class="container">
         <h1>Results</h1>
-        <form id="result-form">
-          <label for="x1">Root 1:</label>
-          <input type="text" id="x1-result" readonly />
-          <label for="x2">Root 2:</label>
-          <input type="text" id="x2-result" readonly />
-          <label for="x3">Root 3:</label>
-          <input type="text" id="x3-result" readonly />
-          <label for="p">p:</label>
-          <input type="text" id="p-result" readonly />
-          <label for="q">q:</label>
-          <input type="text" id="q-result" readonly />
-          <label for="discriminate">Discriminate:</label>
-          <input type="text" id="discriminate" readonly />
-        </form>
+        <div class="result-box">
+          <p>Root 1: (<span id="x1-result"></span>, 0)</p>
+          <p>Root 2: (<span id="x2-result"></span>, 0)</p>
+          <p>Root 3: (<span id="x3-result"></span>, 0)</p>
+          <p>p: <span id="p-result"></span></p>
+          <p>q: <span id="q-result"></span></p>
+          <p>Discriminant: <span id="discriminate"></span></p>
+        </div>
       </div>
     </div>
 
@@ -58,4 +52,4 @@
   </div>
 
   <script type="module" src="/src/script.ts"></script>
-</body>
+</body>      
