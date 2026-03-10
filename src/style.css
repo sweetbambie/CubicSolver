@@ -4,13 +4,11 @@
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
 }
-
 body {
   background-color: rgb(245, 140, 199);
   color: rgb(255, 0, 144);
   padding: 20px;
 }
-
 .main-layout {
   display: flex;
   flex-direction: row;
@@ -20,39 +18,33 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .forms-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
   flex: 0 0 400px;
 }
-
 .container {
   width: 100%;
   padding: 20px;
   background: rgb(255, 189, 226);
   border-radius: 8px;
 }
-
 .graph-container {
   background: white;
   border-radius: 8px;
 }
-
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 input {
   border: 0;
   outline: 0;
   padding: 5px;
   border-radius: 4px;
 }
-
 #button {
   background-color: rgb(245, 140, 199);
   color: rgb(255, 0, 144);
@@ -60,14 +52,4 @@ input {
   padding: 10px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.result-box input {
-  border: none;
-  background: transparent;
-  outline: none;
-  /* font-family: inherit;
-  font-size: inherit;
-  color: #333;
-  width: auto; */
 }
