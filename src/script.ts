@@ -46,34 +46,34 @@ document?.addEventListener("submit", (event) => {
   (document.getElementById("p-result") as HTMLElement).innerText = `${p}`;
   (document.getElementById("q-result") as HTMLElement).innerText = `${q}`;
   (document.getElementById("discriminate") as HTMLElement).innerText = `${discriminant}`;
-  ctx.clearRect(0, 0, 500, 500);
+  ctx.clearRect(0, 0, 600, 600);
   ctx.strokeStyle = "gray";
   ctx.lineWidth = 1;
-  for (let i = 0; i <= 500; i += 20) {
+  for (let i = 0; i <= 600; i += 20) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
-    ctx.lineTo(i, 500);
+    ctx.lineTo(i, 600);
     ctx.moveTo(0, i);
-    ctx.lineTo(500, i);
+    ctx.lineTo(600, i);
     ctx.stroke();
   }
   ctx.strokeStyle = "black";
   ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(0, 250);
-  ctx.lineTo(500, 250);
+  ctx.moveTo(0, 300);
+  ctx.lineTo(600, 300);
   ctx.stroke();
   ctx.beginPath();
-  ctx.moveTo(250, 0);
-  ctx.lineTo(250, 500);
+  ctx.moveTo(300, 0);
+  ctx.lineTo(300, 600);
   ctx.stroke();
   ctx.strokeStyle = "red";
   ctx.lineWidth = 2;
   ctx.beginPath();
-  for (let x = -250; x <= 250; x++) {
+  for (let x = -300; x <= 300; x++) {
     const X = x / 20;
     const y = a * X * X * X + b * X * X + c * X + d;
-    ctx.lineTo(250 + x, 250 - y * 20);
+    ctx.lineTo(300 + x, 300 - y * 20);
     ctx.stroke();
   }
 })
