@@ -33,11 +33,12 @@ document?.addEventListener("submit", (event) => {
     x3 = "Complex"
   }
   else {
-    const r1 = Math.cbrt(q / 2);
+    const r1 = Math.cbrt(-q / 2);
     const shift = b / (3 * a);
-    x1 = r1 - shift;
-    x2 = -2 * r1 - shift;
-    x3 = -2 * r1 - shift;
+
+    x1 = 2 * r1 - shift;
+    x2 = -r1 - shift;
+    x3 = -r1 - shift;
   }
 (document.getElementById("x1-result") as HTMLElement).innerText = `${x1}`;
 (document.getElementById("x2-result") as HTMLElement).innerText = `${x2}`;
