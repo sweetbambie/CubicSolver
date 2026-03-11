@@ -40,12 +40,12 @@ document?.addEventListener("submit", (event) => {
     x2 = -r1 - shift;
     x3 = -r1 - shift;
   }
-(document.getElementById("x1-result") as HTMLElement).innerText = `${x1}`;
-(document.getElementById("x2-result") as HTMLElement).innerText = `${x2}`;
-(document.getElementById("x3-result") as HTMLElement).innerText = `${x3}`;
-(document.getElementById("p-result") as HTMLElement).innerText = `${p}`;
-(document.getElementById("q-result") as HTMLElement).innerText = `${q}`;
-(document.getElementById("discriminate") as HTMLElement).innerText = `${discriminant}`;
+  (document.getElementById("x1-result") as HTMLElement).innerText = `${x1}`;
+  (document.getElementById("x2-result") as HTMLElement).innerText = `${x2}`;
+  (document.getElementById("x3-result") as HTMLElement).innerText = `${x3}`;
+  (document.getElementById("p-result") as HTMLElement).innerText = `${p}`;
+  (document.getElementById("q-result") as HTMLElement).innerText = `${q}`;
+  (document.getElementById("discriminate") as HTMLElement).innerText = `${discriminant}`;
   ctx.clearRect(0, 0, 500, 500);
   ctx.strokeStyle = "gray";
   ctx.lineWidth = 1;
