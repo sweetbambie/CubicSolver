@@ -53,3 +53,29 @@ input {
   cursor: pointer;
   margin-top: 10px;
 }
+.result-box {
+  width: 100%;
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.results-table td {
+  padding: 8px;
+  border-bottom: 1px solid rgb(255, 140, 200);
+}
+.results-table tr:last-child td {
+  border-bottom: none;
+}
+.table-header {
+  background-color: rgb(245, 140, 199);
+  color: rgb(255, 0, 144);
+  font-weight: bold;
+}
+.table-header td {
+  border-bottom: none;
+}
+.results-table tr:hover {
+  background-color: rgb(255, 205, 235);
+}

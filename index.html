@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="src/script.ts"></script>
 </head>
+
 <body>
   <div class="main-layout">
     <div class="forms-column">
@@ -32,19 +34,47 @@
       </div>
       <div class="container">
         <h1>Results</h1>
+
         <div class="result-box">
-          <p>Root 1: (<span id="x1-result"></span>, 0)</p>
-          <p>Root 2: (<span id="x2-result"></span>, 0)</p>
-          <p>Root 3: (<span id="x3-result"></span>, 0)</p>
-          <p>p: <span id="p-result"></span></p>
-          <p>q: <span id="q-result"></span></p>
-          <p>Discriminant: <span id="discriminate"></span></p>
+          <table class="results-table">
+            <tr>
+              <td>p</td>
+              <td id="p-result"></td>
+            </tr>
+            <tr>
+              <td>q</td>
+              <td id="q-result"></td>
+            </tr>
+            <tr>
+              <td>Discriminant</td>
+              <td id="discriminate"></td>
+            </tr>
+            <tr class="table-header">
+              <td>Value</td>
+              <td>x</td>
+              <td>y</td>
+            </tr>
+            <tr>
+              <td>Root 1</td>
+              <td id="x1-result"></td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Root 2</td>
+              <td id="x2-result"></td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Root 3</td>
+              <td id="x3-result"></td>
+              <td>0</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
     <div class="graph-container">
-      <canvas id="graph" width="500" height="500"></canvas>
-    </div>
-  </div>
-  <script type="module" src="/src/script.ts"></script>
+        <canvas id="graph" width="500" height="500"></canvas>
+      </div>
+    <script type="module" src="/src/script.ts"></script>
 </body>
