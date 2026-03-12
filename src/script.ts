@@ -14,7 +14,7 @@ document?.addEventListener("submit", (event) => {
   const b = Number(bValue.value);
   const c = Number(cValue.value);
   const d = Number(dValue.value);
-  const p = (3 * a * c - Math.pow(b, 2)) / (3 * Math.pow(a, 2));
+  const p = (3 * a * c - Math.pow(b, 2)) / (3 * a ** 2);
   const q = ((27 * Math.pow(a, 2) * d - 9 * a * b * c + 2 * Math.pow(b, 3))) / (27 * Math.pow(a, 3))
   const discriminant = Math.pow(q / 2, 2) + Math.pow(p / 3, 3);
   let x1: number | string;
@@ -26,17 +26,13 @@ document?.addEventListener("submit", (event) => {
     x1 = (2 * (Math.sqrt(-p / 3)) * Math.cos(angle)) - (b / (3 * a));
     x2 = (2 * (Math.sqrt(-p / 3)) * Math.cos(angle + (2 * Math.PI) / 3)) - (b / (3 * a));
     x3 = (2 * (Math.sqrt(-p / 3)) * Math.cos(angle + (4 * Math.PI) / 3)) - (b / (3 * a));
-  }
-
-  else if (discriminant > 0) {
+  } else if (discriminant > 0) {
     const u = Math.cbrt((-q / 2) + Math.sqrt(discriminant));
     const v = Math.cbrt((-q / 2) - Math.sqrt(discriminant));
     x1 = u + v - (b / (3 * a))
     x2 = "Complex";
     x3 = "Complex"
-  }
-
-  else {
+  } else {
     const r1 = Math.cbrt(-q / 2);
     const shift = b / (3 * a);
 
@@ -55,6 +51,7 @@ document?.addEventListener("submit", (event) => {
   ctx.clearRect(0, 0, 600, 600);
   ctx.strokeStyle = "gray";
   ctx.lineWidth = 1;
+
   for (let i = 0; i <= 600; i += 20) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
@@ -63,6 +60,7 @@ document?.addEventListener("submit", (event) => {
     ctx.lineTo(600, i);
     ctx.stroke();
   }
+
   ctx.strokeStyle = "black";
   ctx.lineWidth = 2;
   ctx.beginPath();
@@ -76,6 +74,7 @@ document?.addEventListener("submit", (event) => {
   ctx.strokeStyle = "red";
   ctx.lineWidth = 2;
   ctx.beginPath();
+  
   for (let x = -300; x <= 300; x++) {
     const X = x / 20;
     const y = a * X * X * X + b * X * X + c * X + d;
